@@ -27,7 +27,7 @@ SDL_Texture* loadImage(const char* path) {
 
 // Charger toutes les textures necessaires
 void loadImages() {
-    playerCarre.texture = loadImage("C:/Users/amageau/source/repos/Partiel/Partiel/image/carre.BMP");
+    playerCarre.texture = loadImage("../Image/fond.bmp");
 }
 
 // Initialiser les images avec leurs positions et vitesses initiales

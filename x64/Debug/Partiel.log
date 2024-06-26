@@ -1,2 +1,6 @@
-﻿  image.c
+﻿  deplacement.c
+  input.c
+  main.c
+C:\Users\amageau\source\repos\Partiel\Partiel\main.c(27,12): warning C4026: fonction déclarée avec une liste de paramètres formels
+  Génération de code en cours...
   Partiel.vcxproj -> C:\Users\amageau\source\repos\Partiel\x64\Debug\Partiel.exe

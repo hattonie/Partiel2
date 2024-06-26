@@ -10,16 +10,16 @@ bool dPressed = false;
 
 void switchTrue() {
     switch (event.key.keysym.sym) {
-    case SDLK_z:
+    case SDLK_UP:
         zPressed = true;
         break;
-    case SDLK_s:
+    case SDLK_DOWN:
         sPressed = true;
         break;
-    case SDLK_q:
+    case SDLK_LEFT:
         qPressed = true;
         break;
-    case SDLK_d:
+    case SDLK_RIGHT:
         dPressed = true;
         break;
     }
@@ -27,23 +27,26 @@ void switchTrue() {
 
 void switchFalse() {
     switch (event.key.keysym.sym) {
-    case SDLK_z:
+    case SDLK_UP:
         zPressed = false;
         break;
-    case SDLK_s:
+    case SDLK_DOWN:
         sPressed = false;
         break;
-    case SDLK_q:
+    case SDLK_LEFT:
         qPressed = false;
         break;
-    case SDLK_d:
+    case SDLK_RIGHT:
         dPressed = false;
         break;
     }
 }
 
-void input() {
+void input(int* continuer) {
     while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            *continuer = 0;
+        }
         if (event.type == SDL_KEYDOWN) {
             switchTrue();
         }

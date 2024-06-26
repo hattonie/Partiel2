@@ -11,6 +11,7 @@ SDL_Event event;
 
 int leftRectangleV = 0;
 int rightRectangleV = 0;
+int continuer = 1;
 
 void initAll() {
 	loadImages();
@@ -31,12 +32,12 @@ int main() {
 	}
 	initAll();
 
-	while (1) {
+	while (continuer) {
 		clearRender(renderer);
 
 		mainFunc();
 
-		input();
+		input(&continuer);
 
 		SDL_RenderPresent(renderer);
 		SDL_Delay(10);

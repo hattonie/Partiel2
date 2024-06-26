@@ -12,7 +12,7 @@ bool sPressed;
 bool qPressed;
 bool dPressed;
 
-void input();
+void input(int* continuer);
 void switchTrue();
 void switchFalse();
 
